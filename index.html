@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Joke Box</title>
+    <title>Throw a joke!</title>
     <style>
         body {
-            /* Bright yellow background */
+       
             background-color: #ffeb3b; 
-            /* Monospace font gives it that retro, blocky pixel text look */
             font-family: "Courier New", Courier, monospace;
             text-align: center;
             margin-top: 150px;
             color: #000000;
         }
 
-        /* The text area where the joke appears */
+
         .joke-text {
             font-size: 1.5rem;
             font-weight: bold;
@@ -23,7 +22,7 @@
             line-height: 1.4;
         }
 
-        /* Simple white button with black pixel text */
+
         .pixel-btn {
             background-color: #ffffff;
             color: #000000;
@@ -31,12 +30,12 @@
             font-size: 1.2rem;
             font-weight: bold;
             padding: 15px 30px;
-            border: 4px solid #000000; /* Thick black border for a retro look */
+            border: 4px solid #000000; 
             cursor: pointer;
-            box-shadow: 4px 4px 0px #000000; /* Pixel-style block shadow */
+            box-shadow: 4px 4px 0px #000000; 
         }
 
-        /* Makes the button look like it physically pushes down */
+
         .pixel-btn:active {
             transform: translate(2px, 2px);
             box-shadow: 2px 2px 0px #000000;
@@ -45,26 +44,35 @@
 </head>
 <body>
 
-    <div class="joke-text" id="box">Click the button below if you want to laugh. Or cringe.</div>
+    <div class="joke-text" id="box">Click the button below if you want to laugh.</div>
 
-    <button class="pixel-btn" onclick="throwJoke()">throw a joke</button>
+    <button class="pixel-btn" onclick="throwJoke()">Throw a joke</button>
 
     <script>
-        // A list of simple, text-only jokes
+        
         const list = [
             "Why do programmers wear glasses? Because they can't C#.",
             "What do you call a fake noodle? An impasta.",
             "Why did the scarecrow win an award? Because he was outstanding in his field.",
             "Why don't scientists trust atoms? Because they make up everything.",
             "I told my doctor that I broke my arm in two places. He told me to stop going to those places.",
-            "What do you call a sleeping dinosaur? A dino-snore."
+            "What do you call a sleeping dinosaur? A dino-snore.",
+            "How many programmers does it take to change a light bulb? None, that's a hardware problem.",
+            "Why did the computer go to the hospital? It had a virus!",
+            "Why do we tell actors to 'break a leg'? Because every play has a cast.",
+            "What kind of shoes do ninjas wear? Sneakers.",
+            "Why did the smartphone get glasses? Because it lost all its contacts.",
+            "What's blue and smells like red paint? Blue paint.",
+            "Why was the belt arrested? For holding up a pair of pants!",
+            "Where do waterfalls go to open a savings account? The river bank.",
+            "Why did the student eat their homework? Because the teacher said it was a piece of cake.",
+            "What do you call a line of people waiting to get haircuts? A barber-queue.",
+            " How do you organize a space party? You planet!"
         ];
 
         function throwJoke() {
-            // Pick a random position number from our list length
-            let randomNum = Math.floor(Math.random() * list.length);
             
-            // Display the random joke inside our text box container
+            let randomNum = Math.floor(Math.random() * list.length);
             document.getElementById('box').innerText = list[randomNum];
         }
     </script>
